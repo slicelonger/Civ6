@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="2646dfca-1ea4-47fd-ac4c-853ae23a5e20" version="1">
+  <Properties>
+    <Name>LOC_IMPROVED_DEAL_SCREEN_NAME</Name>
+    <Teaser>LOC_IMPROVED_DEAL_SCREEN_TEASER</Teaser>
+    <Description>LOC_IMPROVED_DEAL_SCREEN_DESCRIPTION</Description>
+    <Authors>LOC_IMPROVED_DEAL_SCREEN_AUTHORS</Authors>
+    <SpecialThanks>LOC_IMPROVED_DEAL_SCREEN_SPECIAL_THANKS</SpecialThanks>
+  </Properties>
+  <Files>
+    <File>UI/DiplomacyDealView.lua</File>
+    <File>UI/DiplomacyDealView.xml</File>
+  </Files>
+
+  <Components>
+    <ImportFiles id="IMPROVED_DEAL_SCREEN_IMPORT_FILES">
+      <Items>
+        <File>UI/DiplomacyDealView.xml</File>
+        <File>UI/DiplomacyDealView.lua</File>
+      </Items>
+    </ImportFiles>
+  </Components>
+
+  <Settings>
+    <Custom id="IMPROVED_DEAL_SCREEN_SETTINGS">
+      <Items>
+        <Component>IMPROVED_DEAL_SCREEN_IMPORT_FILES</Component>
+      </Items>
+    </Custom>
+  </Settings>
+
+  <LocalizedText>
+    <Text id="LOC_IMPROVED_DEAL_SCREEN_COMPONENT_NAME">
+      <en_US>Improved Deal Screen</en_US>
+    </Text>
+    <Text id="LOC_IMPROVED_DEAL_SCREEN_AUTHORS">
+      <en_US>slicelonger</en_US>
+    </Text>
+    <Text id="LOC_IMPROVED_DEAL_SCREEN_SPECIAL_THANKS">
+      <en_US>sp00n</en_US>
+    </Text>
+    <Text id="LOC_IMPROVED_DEAL_SCREEN_DESCRIPTION">
+      <en_US>A totally revamped diplomatic deals screen, with an improved and expanded layout, easier to read and navigate offer area, color-coded icons, and more in-depth information</en_US>
+    </Text>
+    <Text id="LOC_IMPROVED_DEAL_SCREEN_TEASER">
+      <en_US>A totally revamped diplomatic deals screen</en_US>
+    </Text>
+    <Text id="LOC_IMPROVED_DEAL_SCREEN_NAME">
+      <en_US>Improved Deal Screen</en_US>
+    </Text>
+  </LocalizedText>
+</Mod>
