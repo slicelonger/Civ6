@@ -383,15 +383,6 @@ function CreatePlayerDealPanel(playerType : number, rootControl : table)
 	ms_DealGroups[DealItemGroupTypes.CITIES][playerType] = CreateVerticalGroup(rootControl);
 	ms_DealGroups[DealItemGroupTypes.GREAT_WORKS][playerType] = CreateVerticalGroup(rootControl);
 	ms_DealGroups[DealItemGroupTypes.CAPTIVES][playerType] = CreateVerticalGroup(rootControl);
-	
-	--**********************************************************************
-	-- Currently putting them all in the same control.
-	--[[ms_DealGroups[DealItemGroupTypes.GOLD][playerType] = rootControl;
-	ms_DealGroups[DealItemGroupTypes.RESOURCES][playerType] = rootControl;
-	ms_DealGroups[DealItemGroupTypes.AGREEMENTS][playerType] = rootControl;
-	ms_DealGroups[DealItemGroupTypes.CITIES][playerType] = rootControl;
-	ms_DealGroups[DealItemGroupTypes.GREAT_WORKS][playerType] = rootControl;
-	ms_DealGroups[DealItemGroupTypes.CAPTIVES][playerType] = rootControl;]]--
 
 end
 
@@ -1400,12 +1391,6 @@ function OnClickAvailableGreatWork(player, type, greatWorkIndex)
 			end
 		end
 	end
-
-
-
-
-
-	--OnClickAvailableBasic(DealItemTypes.GREATWORK, player, type);
 	UI.PlaySound("UI_GreatWorks_Put_Down");
 
 end
@@ -2287,7 +2272,7 @@ function PopulateAvailableCaptives(player : table, iconList : table)
 
 			local type = entry.ForType;
 			local icon = ms_IconAndTextIM:GetInstance(iconList.ListStack);
-			SetIconToSize(icon, "ICON_UNIT_SPY");
+			SetIconToSize(icon, "ICON_UNIT_SPY", 38);
 			icon.AmountText:SetHide(true);
 			icon.IconText:LocalizeAndSetText(entry.ForTypeName);
 			icon.SelectButton:SetDisabled( not entry.IsValid and entry.ValidationResult ~= DealValidationResult.MISSING_DEPENDENCY );	-- Hide if invalid, unless it is just missing a dependency, the user will update that when it is added to the deal.
@@ -2391,7 +2376,7 @@ function PopulateDealBasic(player : table, iconList : table, populateType : numb
 				
 				if (type == populateType) then
 					local icon = ms_IconAndTextIM:GetInstance(iconList.ListStack);
-					SetIconToSize(icon, iconName);
+					SetIconToSize(icon, iconName, 38);
 					icon.AmountText:SetHide(true);
 					local typeName = pDealItem:GetValueTypeNameID();
 					if (typeName ~= nil) then
